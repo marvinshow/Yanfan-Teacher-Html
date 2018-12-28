@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css" />
+		<link rel="stylesheet" type="text/css" href="../css/icons-extra.css" />
+
+	</head>
+
+	<body>
+		<div class="mui-navbar-inner mui-bar mui-bar-nav">
+			<button type="button" class="mui-left mui-action-back mui-btn mui-btn-link mui-btn-nav mui-pull-left" style="color: #C0C0C0;">
+				<span class="mui-icon mui-icon-left-nav"></span>返回
+			</button>
+			<button id="submit" class="mui-btn mui-btn-green mui-btn-link mui-pull-right">发布</button>
+			<h1 class="mui-center mui-title">发布成长相册</h1>
+		</div>
+		<div class="mui-content">
+			<div class="mui-content-padded1">
+				<ul class="mui-table-view">
+					<div style="margin: 0px auto;">
+						<p><textarea id="messageInput" rows="5" placeholder="你可以在这里输入对相册的描述…" style="border: 0px;"></textarea></p>
+						<a href="#picture">
+							<div class="post-upload">
+								<svg class="posticon" aria-hidden="true" style="width: 2em; height: 2em;">
+									<use xlink:href="#icon-shangchuan"></use>
+								</svg>
+							</div>
+						</a>
+					</div>
+					<li class="mui-table-view-cell" style="margin-left: 3px;line-height: 35px;">
+					</li>
+					<li class="mui-table-view-cell" style="margin-left: 3px;line-height: 35px;">
+						<span class="mui-icon-extra mui-icon-extra-class" style="width: 10px;height: 10px;"></span><span style="margin: 20px;">类型</span>
+						<span><input id="sex1" name="sex" type="radio">相册</span>
+						<span style="margin-left: 50px;"><input id="sex2" name="sex" type="radio">作品</span>
+						<span style="margin-left: 50px;"><input id="sex2" name="sex" type="radio">重要时刻</span>
+					</li>
+					<li class="mui-table-view-cell" style="margin-left: 3px;line-height: 35px;">
+						
+						<p>选择学生</p>
+						<ul class="mui-table-view mui-grid-view">
+							<li class="mui-table-view-cell mui-media mui-col-xs-2">
+								<div>
+									<p style="position: absolute;top:10px;text-align: center;">
+										<img class="mui-media-object mui-pull-left" style="width: 50px;height: 50px;" src="../images/girl_b.png">
+										<img class="selectImg2" src="../images/select.png">
+									</p>
+									<p style="text-align: center;margin-top:45px;font-size: 10px;">刘嘉慧</p>
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-2">
+								<div>
+									<p style="position: absolute;top:10px;text-align: center;">
+										<img class="mui-media-object mui-pull-left" style="width: 50px;height: 50px;" src="../images/default_photo.png">
+										<img class="selectImg2" src="../images/select.png">
+									</p>
+									<p style="text-align: center;margin-top:45px;font-size: 10px;">于涵</p>
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-2">
+								<div>
+									<p style="position: absolute;top:10px;text-align: center;">
+										<img class="mui-media-object mui-pull-left" style="width: 50px;height: 50px;" src="../images/default_photo.png">
+										<img class="selectImg2" src="../images/select.png">
+									</p>
+									<p style="text-align: center;margin-top:45px;font-size: 10px;">陈亮亮</p>
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-2">
+								<div>
+									<p style="position: absolute;top:10px;text-align: center;">
+										<img class="mui-media-object mui-pull-left" style="width: 50px;height: 50px;" src="../images/default_photo.png">
+										<img class="selectImg2" src="../images/select.png">
+									</p>
+									<p style="text-align: center;margin-top:45px;font-size: 10px;">杨伟博</p>
+								</div>
+							</li>
+							
+						</ul>
+					</li>
+				</ul>
+				
+			<style>
+				.selectImg2 {
+					position: absolute;
+					margin: 15px 0px 0 0;
+					top:-25px;
+					right: 3px;
+					width: 20px;
+				}
+			</style>	
+				
+			</div>
+		</div>
+
+		<div id="picture" class="mui-popover mui-popover-action mui-popover-bottom">
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#">拍照或录像</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="#">选取现有的</a>
+				</li>
+			</ul>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a href="#picture"><b>取消</b></a>
+				</li>
+			</ul>
+		</div>
+
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script src="../fonts/iconfont.js"></script>
+	<script>
+		(function($, doc) {
+				$.init();
+	</script>
+
+</html>

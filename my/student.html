@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/icons-extra.css" />
+
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css" />
+		<style>
+			.mui-table-view {
+				margin-top: 10px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="mui-navbar-inner mui-bar mui-bar-nav">
+			<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left" style="color: #C0C0C0;">
+				<span class="mui-icon mui-icon-left-nav"></span>返回
+			</button>
+			<h1 class="mui-center mui-title">学生管理</h1>
+		</div>
+		<div class="mui-content">
+			<ul class="mui-table-view mui-table-view-chevron">
+				<a href="student_file_add.html">
+				<li class="mui-table-view-cell mui-media" style="align-items:center; display: -webkit-flex;">
+					<img class="mui-media-object mui-pull-left" id="head-img" src="../images/stud_ico1.png">
+					<div class="mui-media-body" style="color: #000000;">
+						添加学生
+					</div>
+				</li>
+				</a>
+			</ul>
+			
+			<ul class="mui-table-view mui-table-view-chevron">
+				
+				<li class="mui-table-view-cell" style="padding-right: 65px;">
+					<a class='mui-navigate-right' href="student_file.html">
+						<div class="mui-table" style="align-items:center; display: -webkit-flex;">
+							<div class="mui-table-cell mui-col-xs-10">
+								<img class="mui-media-object mui-pull-left" src="../images/default_photo.png">
+								<span class="mui-h4 mui-ellipsis">刘慧</span>
+								<span class="mui-h5"><img src="../images/female.png" style="width: 15px;"></span>
+								<p class='mui-h5'>家长尚未注册</p>
+							</div>
+							<div class="mui-table-cell mui-col-xs-2 mui-text-right">
+								<span>
+									<img class="selficon" src="../images/phone.png"/>
+								</span>
+								<span>
+									<img class="selficon" src="../images/image.png"/>
+								</span>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li class="mui-table-view-cell" style="padding-right: 65px;">
+					<a class='mui-navigate-right' href="student_file.html">
+						<div class="mui-table" style="align-items:center; display: -webkit-flex;">
+							<div class="mui-table-cell mui-col-xs-10">
+								<img class="mui-media-object mui-pull-left" src="../images/girl_b.png">
+								<span class="mui-h4 mui-ellipsis">于涵</span>
+								<span class="mui-h5"><img src="../images/female.png" style="width: 15px;"></span>
+								<p class='mui-h5'>13457896455</p>
+							</div>
+							<div class="mui-table-cell mui-col-xs-2 mui-text-right">
+								<span>
+									<img class="selficon" src="../images/phone.png"/>
+								</span>
+								<span>
+									<img class="selficon" src="../images/image.png"/>
+								</span>
+							</div>
+						</div>
+					</a>
+				</li>
+				
+				<li class="mui-table-view-cell" style="padding-right: 65px;">
+					<a class='mui-navigate-right' href="student_file.html">
+						<div class="mui-table" style="align-items:center; display: -webkit-flex;">
+							<div class="mui-table-cell mui-col-xs-10">
+								<img class="mui-media-object mui-pull-left" src="../images/default_photo.png">
+								<span class="mui-h4 mui-ellipsis">杨伟博</span>
+								<span class="mui-h5"><img src="../images/male.png" style="width: 15px;"></span>
+								<p class='mui-h5'>13457896455</p>
+							</div>
+							<div class="mui-table-cell mui-col-xs-2 mui-text-right">
+								<span>
+									<img class="selficon" src="../images/phone.png"/>
+								</span>
+								<span>
+									<img class="selficon" src="../images/image.png"/>
+								</span>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+
+		</div>
+		<div class="mui-index-bottom">
+			——我是有底线的——
+		</div>
+
+
+	</body>
+	<script src="../js/mui.min.js "></script>
+	<script src="../fonts/iconfont.js"></script>
+
+	<script>
+		mui.init();
+		mui('body').on('tap', 'a', function() {
+			document.location.href = this.href;
+		});
+
+		mui('#parent1001').on('tap', '', function() {
+			alert("将要给这个孩子家长打电话");
+		});
+	</script>
+
+</html>

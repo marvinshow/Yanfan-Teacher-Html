@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/icons-extra.css" />
+
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css" />
+
+	</head>
+
+	<body>
+
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item" href="../default.html">
+				<span class="mui-icon mui-icon-star"></span>
+				<span class="mui-tab-label">动态</span>
+			</a>
+			<a class="mui-tab-item" href="../notice/notice.html">
+				<span class="mui-icon mui-icon-email-filled"><span class="mui-badge">9</span></span>
+				<span class="mui-tab-label">通知</span>
+			</a>
+			<a id="div_plus" class="mui-tab-item mui-active" href="javascript:void(0)">
+				<div class="plus">
+					<span class="mui-icon mui-icon-plus" style="font-size: 50px;float: left;margin:-6px 0px 0px -2px;"></span>
+				</div>
+			</a>
+			<a class="mui-tab-item mui-active" href="javascript:void(0)">
+				<span class="mui-icon mui-icon-chatbubble"></span>
+				<span class="mui-tab-label">聊聊</span>
+			</a>
+			<a class="mui-tab-item" href="../my/my.html">
+				<span class="mui-icon mui-icon-person"></span>
+				<span class="mui-tab-label">我</span>
+			</a>
+		</nav>
+
+		<div class="mui-navbar-inner mui-bar mui-bar-nav">
+			<h1 class="mui-center mui-title">全部聊聊</h1>
+		</div>
+		<div class="mui-content">
+
+			<ul class="mui-table-view mui-table-view-chevron">
+				<li class="mui-table-view-cell" style="padding-right: 80px;">
+					<a href="im_chat.html">
+						<div class="mui-table">
+							<div class="mui-table-cell mui-col-xs-10">
+								<span style="position: relative;">
+									<img class="mui-media-object mui-pull-left" src="../images/shuijiao.jpg">
+									<span class="mui-badge mui-badge-danger" style="position:absolute;top:-9px;margin-left: -20px;">1</span>
+								</span>
+								<span class="mui-h4 mui-ellipsis">杨伟博的爸爸</span>
+								<p class="mui-h6 mui-ellipsis">不客气我们应该做的不客气我们应该做的不客气我们应该做的不客气我们应该做的</p>
+							</div>
+							<div class="mui-table-cell mui-col-xs-2 mui-text-right">
+								<span class="mui-h5">2018-10-08 12:25:44</span>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li class="mui-table-view-cell" style="padding-right: 80px;">
+					<a href="javascript:;">
+						<div class="mui-table">
+							<div class="mui-table-cell mui-col-xs-10">
+								<span style="position: relative;">
+									<img class="mui-media-object mui-pull-left" src="../images/shuijiao.jpg">
+									<span class="mui-badge mui-badge-danger" style="position:absolute;top:-9px;margin-left: -20px;">3</span>
+								</span>
+								<span class="mui-h4 mui-ellipsis">于涵的爸爸</span>
+								<p class="mui-h6 mui-ellipsis">不客气我们应该做的不客气我们应该做的不客气我们应该做的不客气我们应该做的</p>
+							</div>
+							<div class="mui-table-cell mui-col-xs-2 mui-text-right">
+								<span class="mui-h5">2018-10-08 12:25:44</span>
+							</div>
+						</div>
+					</a>
+				</li>
+
+				<li class="mui-table-view-cell" style="padding-right: 80px;">
+					<a href="javascript:;">
+						<div class="mui-table">
+							<div class="mui-table-cell mui-col-xs-10">
+								<span style="position: relative;">
+									<img class="mui-media-object mui-pull-left" src="../images/shuijiao.jpg">
+									<span class="mui-badge mui-badge-danger" style="position:absolute;top:-9px;margin-left: -20px;">5</span>
+								</span>
+								<span class="mui-h4 mui-ellipsis">洪兵的妈妈</span>
+								<p class="mui-h6 mui-ellipsis">不客气我们应该做的不客气我们应该做的不客气我们应该做的不客气我们应该做的</p>
+							</div>
+							<div class="mui-table-cell mui-col-xs-2 mui-text-right">
+								<span class="mui-h5">2018-10-08 12:25:44</span>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+
+		</div>
+		<div class="mui-index-bottom">
+			——我是有底线的——
+		</div>
+
+
+	</body>
+	<script src="../js/mui.min.js "></script>
+	<script src="../fonts/iconfont.js"></script>
+
+	<script>
+		mui.init();
+		mui('body').on('tap', 'a', function() {
+			document.location.href = this.href;
+		});
+
+		mui('#parent1001').on('tap', '', function() {
+			alert("将要给这个孩子家长打电话");
+		});
+	</script>
+
+</html>

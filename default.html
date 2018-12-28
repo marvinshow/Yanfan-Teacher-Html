@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="css/icons-extra.css" />
+
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="css/app.css" />
+		<style>
+			/*单击单元格背景仍然为白色，替换官方点击后背景变成灰色
+			.mui-table-view-cell.mui-active {
+				background-color: #fff
+			}*/
+			
+			/*右侧下拉弹出菜单*/
+			.rightPopover {
+				top: 40px;
+				right: 9px;
+			}
+			.mui-popover {
+				height: 140px;
+			}
+			.icon {
+			width: 2em;
+			height: 2em;
+			vertical-align: -0.15em;
+			fill: currentColor;
+			overflow: hidden;
+			}
+		</style>
+
+
+	</head>
+
+	<body>
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active" href="javascript:void(0)">
+				<span class="mui-icon mui-icon-star-filled"></span>
+				<span class="mui-tab-label">动态</span>
+			</a>
+			<a class="mui-tab-item" href="notice/notice.html">
+				<span class="mui-icon mui-icon-email"><span class="mui-badge">9</span></span>
+				<span class="mui-tab-label">通知</span>
+			</a>
+			<a id="div_plus" class="mui-tab-item mui-active" href="javascript:void(0)">
+				<div class="plus">
+					<span class="mui-icon mui-icon-plus" style="font-size: 50px;float: left;margin:-6px 0px 0px -2px;"></span>
+				</div>
+			</a>
+			<a class="mui-tab-item" href="im/im_list.html">
+				<span class="mui-icon mui-icon-chatbubble"></span>
+				<span class="mui-tab-label">聊聊</span>
+			</a>
+			<a class="mui-tab-item" href="my/my.html">
+				<span class="mui-icon mui-icon-person"></span>
+				<span class="mui-tab-label">我</span>
+			</a>
+		</nav>
+
+		<div class="mui-content" style="position: absolute;">
+			<!--隐藏的内容输出框-->
+			<div id="div_inputContent" class="inputContent mui-popover" style="height: 220px;">
+				<p><textarea id="messageInput" rows="5" placeholder="请输入评论内容"></textarea></p>
+				<p style="text-align: right;">
+					<button type="button" class="mui-btn" style="margin-right: 20px;width: 70px;">取消</button>
+					<button type="button" class="mui-btn mui-btn-green" style="margin-right: 20px;width: 70px;">发送</button>
+				</p>
+			</div>
+
+			<ul class="mui-table-view mui-table-view-chevron">
+				<li class="mui-table-view-cell mui-media">
+					<img class="mui-media-object mui-pull-left" id="head-img" src="images/shuijiao.jpg">
+					<div class="mui-media-body">
+						王涛
+						<p style="color: #000000;margin-top: 10px;">小一班 主班老师</p>
+					</div>
+				</li>
+			</ul>
+			
+			<ul class="mui-table-view mui-grid-view mui-grid-9"  style="background-color: #FFFFFF;border: 0px;margin: 10px 0 10px 0; ">
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3" style="border: 0px;"><a href="my/attendance_callname.html">
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#icon-wodekaoqin-"></use>
+						</svg>
+						<div class="mui-media-body" style="text-align: center;">考勤</div></a></li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3" style="border: 0px;"><a href="my/student.html">
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#icon-baobao"></use>
+						</svg>
+						<div class="mui-media-body">学生</div></a></li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3" style="border: 0px;"><a href="https://api.1d1d100.com/lesson/teacher/main?_t=1545918798">
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#icon-xueyuan"></use>
+						</svg>
+						<div class="mui-media-body">幼师学院</div></a></li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3" style="border: 0px;"><a href="study/course.html">
+						<svg class="icon" aria-hidden="true">
+							<use xlink:href="#icon-ziyuan2"></use>
+						</svg>
+						<div class="mui-media-body">资源</div></a></li>
+
+			</ul> 
+
+			<div class="hb-newmessage mui-hidden" id="div_newmessage">
+				<a href="my/message.html">
+					<img class="mui-media-object mui-pull-left hb-newmessage-photo" src="images/girl_b.png">
+					<span class="hb-newmessage-content">有26条新消息</span>
+					<span class="hb-newmessage-arrow">></span>
+				</a>
+			</div>
+
+			<ul class="mui-table-view">
+
+				<li class="mui-table-view-cell mui-media" style="width: 100%;">
+					<img class="mui-media-object mui-pull-left" src="images/girl_b.png">
+					<div class="mui-media-body">
+						<div>
+							<span class="mui-media-author" style="float: left;">王涛(主班老师)</span>
+							<span style="float: right;">
+								<img id="pull1" style="width: 26px; height: 16px;cursor: pointer;" src="images/pull.png" />
+								<div id="rightPopover1" class="rightPopover mui-popover">
+									<div class="mui-popover-arrow" style="left: auto;right: 6px;"></div>
+									<div class="mui-scroll-wrapper">
+										<div class="mui-scroll">
+											<ul class="mui-table-view">
+												<li class="mui-table-view-cell"><a href="#">分享</a></li>
+												<li class="mui-table-view-cell"><a href="#">下载视频</a></li>
+												<li class="mui-table-view-cell"><a href="#">关闭</a></li>
+											</ul>
+										</div>
+									</div>
+
+								</div>
+							</span>
+						</div>
+						<div class="mui-media-content">布置作业</div>
+						<ul class="mui-table-view mui-grid-view" style="margin-left: -12px;">
+							<li class="mui-table-view-cell mui-media mui-col-xs-4">
+								<div>
+									<img class="mui-media-object" src="images/shuijiao.jpg" data-preview-src="" data-preview-group="1">
+									<img class="selectImg" src="images/select.png">
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4">
+								<img class="mui-media-object" src="images/muwu.jpg" data-preview-src="" data-preview-group="1">
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4">
+								<img class="mui-media-object" src="images/cbd.jpg" data-preview-src="" data-preview-group="1">
+							</li>
+						</ul>
+						<div class="hb-media-tag">
+							<div class="hb-tag-info">
+								<span>17:34</span>
+								<span>通知作业</span>
+								<span style="margin-left: 50px;color: #576b95;">删除</span>
+							</div>
+							<div class="hb-comment-message mui-hidden" id="div-comment-message1">
+								<span class="mui-icon-extra mui-icon-extra-heart verticalmiddle"></span><span class="hb-comment-message-text">赞</span>
+								<span class="splitline">|</span>
+								<span class="mui-icon mui-icon-chatbubble verticalmiddle"></span><span id="btn_pinglun" class="hb-comment-message-text">评论</span>
+								<span class="splitline">|</span>
+								<span class="mui-icon mui-icon-download verticalmiddle"></span><span class="hb-comment-message-text">认领</span>
+							</div>
+							<div class="hb-comments-button" id="toastBtn" onclick="showCommentMenu(1)"></div>
+						</div>
+						<div class="hb-comment-board">
+							<ul class="mui-table-view">
+								<li class="mui-table-view-cell hb-li-comment">
+									<span class="mui-icon-extra mui-icon-extra-heart"></span>
+									<span class="hb-li-comment-author">
+										于涵的爸爸
+									</span>
+								</li>
+								<li class="mui-table-view-cell hb-li-comment">
+									<span class="hb-li-comment-author">王紫萱的妈妈：</span>拍得好漂亮啊
+								</li>
+								<li class="mui-table-view-cell hb-li-comment">
+									<span class="hb-li-comment-author">杨伟博的爸爸：</span>怎么没拍上我儿子？
+								</li>
+								<li class="mui-table-view-cell hb-li-comment">
+									<span class="hb-li-comment-author">陈刚园长</span>回复<span class="hb-li-comment-author">杨伟博的爸爸：</span>你那宝贝儿子淘气得都飞上天了，拍不着他
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+
+
+
+				<li class="mui-table-view-cell mui-media" style="width: 100%;">
+					<img class="mui-media-object mui-pull-left" src="images/shuijiao.jpg">
+					<div class="mui-media-body">
+						<div>
+							<span class="mui-media-author" style="float: left;">李婷婷(保育员)</span>
+							<span style="float: right;">
+								<button id="btn_renling2" type="button" class="mui-btn mui-btn-green mui-btn-outlined mui-hidden">认领</button>
+								<img id="pull2" class="pullimg" src="images/pull.png" />
+								<div id="rightPopover2" class="rightPopover mui-popover">
+									<div class="mui-popover-arrow" style="left: auto;right: 6px;"></div>
+									<div class="mui-scroll-wrapper">
+										<div class="mui-scroll">
+											<ul class="mui-table-view">
+												<li class="mui-table-view-cell"><a href="#">分享</a></li>
+												<li class="mui-table-view-cell"><a href="#">下载视频</a></li>
+												<li class="mui-table-view-cell"><a href="#">关闭</a></li>
+											</ul>
+										</div>
+									</div>
+
+								</div>
+							</span>
+						</div>
+
+						<div class="mui-media-content">今天孩子玩得真开心</div>
+						<ul class="mui-table-view mui-grid-view" style="margin-left: -12px;">
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<div>
+									<img class="mui-media-object" src="images/shuijiao.jpg" data-preview-src="" data-preview-group="2">
+									<img name="SelectImgGroup1" id="id_selectImg1001" class="selectImg mui-hidden" src="images/select.png" onclick="changeSrc(1001)">
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<div>
+									<img class="mui-media-object" src="images/muwu.jpg" data-preview-src="" data-preview-group="2">
+									<img name="SelectImgGroup1" id="id_selectImg1002" class="selectImg mui-hidden" src="images/select.png" onclick="changeSrc(1002)">
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<div>
+									<img class="mui-media-object" src="images/muwu.jpg" data-preview-src="" data-preview-group="2">
+									<img name="SelectImgGroup1" id="id_selectImg1003" class="selectImg mui-hidden" src="images/select.png" onclick="changeSrc(1003)">
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-6">
+								<div>
+									<img class="mui-media-object" src="images/muwu.jpg" data-preview-src="" data-preview-group="2">
+									<img name="SelectImgGroup1" id="id_selectImg1004" class="selectImg mui-hidden" src="images/select.png" onclick="changeSrc(1004)">
+								</div>
+							</li>
+							
+						</ul>
+						<div class="hb-media-tag">
+							<div class="hb-tag-info">
+								<span>15:12</span>
+								<span>班级圈</span>
+								<span style="margin-left: 50px;color: #576b95;">删除</span>
+							</div>
+							<div class="hb-comment-message mui-hidden" id="div-comment-message2">
+								<span class="mui-icon-extra mui-icon-extra-heart verticalmiddle"></span><span class="hb-comment-message-text">赞</span>
+								<span class="splitline">|</span>
+								<span class="mui-icon mui-icon-chatbubble verticalmiddle"></span><span class="hb-comment-message-text">评论</span>
+								<span class="splitline">|</span>
+								<span class="mui-icon mui-icon-download verticalmiddle"></span><span id="span_renling" class="hb-comment-message-text">认领</span>
+							</div>
+							<div class="hb-comments-button" id="toastBtn" onclick="showCommentMenu(2)"></div>
+						</div>
+						<div class="hb-comment-board">
+							<ul class="mui-table-view">
+								<li class="mui-table-view-cell hb-li-comment">
+									<span class="mui-icon-extra mui-icon-extra-heart"></span>
+									<span class="hb-li-comment-author">
+										谢美西的妈妈 米奇妈妈
+									</span>
+								</li>
+								<li class="mui-table-view-cell hb-li-comment">
+									<span class="hb-li-comment-author">陈浩然的妈妈：</span>看到孩子玩得开心，我们家长也很开心，老师们辛苦了！
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-media" style="width: 100%;">
+					<img class="mui-media-object mui-pull-left" src="images/principal.png">
+					<div class="mui-media-body">
+						<div>
+							<span class="mui-media-author" style="float: left;">陈刚(园长)</span>
+							<span style="float: right;">
+								<img id="pull3" style="width: 26px; height: 16px;cursor: pointer;" src="images/pull.png" />
+								<div id="rightPopover3" class="rightPopover mui-popover">
+									<div class="mui-popover-arrow" style="left: auto;right: 6px;"></div>
+									<div class="mui-scroll-wrapper">
+										<div class="mui-scroll">
+											<ul class="mui-table-view">
+												<li class="mui-table-view-cell"><a href="#">分享</a></li>
+												<li class="mui-table-view-cell"><a href="#">下载视频</a></li>
+												<li class="mui-table-view-cell"><a href="#">关闭</a></li>
+											</ul>
+										</div>
+									</div>
+
+								</div>
+							</span>
+						</div>
+						<div class="mui-media-content">消防员叔叔来教我们面对火情应该如何保护自己</div>
+						<div class="hb-dongtai-video" id="div_video">
+							<img class="hb-dongtai-video-pic" src="images/videopic.jpg">
+							<img class="hb-dongtai-video-play" src="images/play.png">
+							<video class="mui-hidden" id="videoID" src="http://v001.1d1d100.com/66432bf0f13322b37ff513008e0c7dd8.mp4"
+							 controls="" preload="none" loop="" style="object-fit: fill;"></video>
+						</div>
+						<div class="hb-media-tag">
+							<div class="hb-tag-info">
+								<span>2018.12.10 21:33</span>
+								<span>宝宝视频</span>
+								<span style="margin-left: 50px;color: #576b95;">删除</span>
+							</div>
+							<div class="hb-comment-message mui-hidden" id="div-comment-message3">
+								<span class="mui-icon-extra mui-icon-extra-heart verticalmiddle"></span><span class="hb-comment-message-text">赞</span>
+								<span class="splitline">|</span>
+								<span class="mui-icon mui-icon-chatbubble verticalmiddle"></span><span class="hb-comment-message-text">评论</span>
+								<span class="splitline">|</span>
+								<span class="mui-icon mui-icon-download verticalmiddle"></span><span class="hb-comment-message-text">认领</span>
+							</div>
+							<div class="hb-comments-button" id="toastBtn" onclick="showCommentMenu(3)"></div>
+						</div>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-media" style="width: 100%;">
+					<img class="mui-media-object mui-pull-left" src="images/yuantiao.jpg">
+					<div class="mui-media-body">
+						<div>
+							<span class="mui-media-author" style="float: left;">刘鑫(班主任)</span>
+							<span style="float: right;">
+								<img id="pull4" style="width: 26px; height: 16px;cursor: pointer;" src="images/pull.png" />
+								<div id="rightPopover4" class="rightPopover mui-popover">
+									<div class="mui-popover-arrow" style="left: auto;right: 6px;"></div>
+									<div class="mui-scroll-wrapper">
+										<div class="mui-scroll">
+											<ul class="mui-table-view">
+												<li class="mui-table-view-cell"><a href="#">分享</a></li>
+												<li class="mui-table-view-cell"><a href="#">下载视频</a></li>
+												<li class="mui-table-view-cell"><a href="#">关闭</a></li>
+											</ul>
+										</div>
+									</div>
+
+								</div>
+							</span>
+						</div>
+						<div class="mui-media-content">看看我们的小小发明家</div>
+						<ul class="mui-table-view mui-grid-view" style="margin-left: -12px;">
+							<li class="mui-table-view-cell mui-media mui-col-xs-12">
+								<img class="mui-media-object" src="images/shuijiao.jpg" data-preview-src="" data-preview-group="4">
+							</li>
+						</ul>
+						<div class="hb-media-tag">
+							<div class="hb-tag-info">
+								<span>15:12</span>
+								<span>班级圈</span>
+								<span style="margin-left: 50px;color: #576b95;">删除</span>
+							</div>
+							<div class="hb-comment-message mui-hidden" id="div-comment-message4">
+								<span class="mui-icon-extra mui-icon-extra-heart verticalmiddle"></span><span class="hb-comment-message-text">赞</span>
+								<span class="splitline">|</span>
+								<span class="mui-icon mui-icon-chatbubble verticalmiddle"></span><span class="hb-comment-message-text">评论</span>
+								<span class="splitline">|</span>
+								<span class="mui-icon mui-icon-download verticalmiddle"></span><span class="hb-comment-message-text">认领</span>
+							</div>
+							<div class="hb-comments-button" id="toastBtn" onclick="showCommentMenu(4)"></div>
+						</div>
+						<div class="hb-comment-board">
+							<ul class="mui-table-view">
+								<li class="mui-table-view-cell hb-li-comment">
+									<span class="mui-icon-extra mui-icon-extra-heart"></span>
+									<span class="hb-li-comment-author">
+										谢美西的妈妈 米奇妈妈
+									</span>
+								</li>
+								<li class="mui-table-view-cell hb-li-comment">
+									<span class="hb-li-comment-author">陈浩然的妈妈：</span>看到孩子玩得开心，我们家长也很开心，老师们辛苦了！
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+
+			<div class="mui-index-bottom">
+				——我是有底线的——
+			</div>
+		</div>
+
+		<!--点击底部导航“+”后弹出的发布页面-->
+		<div id="div_postboard" class="container mui-hidden">
+			<div class="posttile">
+				<h2>发布</h2>
+			</div>
+			<div id='messageBar' class="post-bar">
+				<div id="More_content" class="post-tool-div">
+					<a href="my/post.html">
+						<div class="div-post-icon">
+							<p>
+								<svg class="posticon" aria-hidden="true">
+									<use xlink:href="#icon-dongtai1"></use>
+								</svg>
+							</p>
+							<span style="color: #000;">发动态</span>
+						</div>
+					</a>
+
+					<a href="my/post.html">
+						<div class="div-post-icon">
+							<p>
+								<svg class="posticon" aria-hidden="true">
+									<use xlink:href="#icon-shipinwenjian"></use>
+								</svg>
+							</p>
+							<span style="color: #000;">拍摄</span>
+						</div>
+					</a>
+				</div>
+				<div id="closepost" class="closeIcon"><img src="images/close.png" /></div>
+			</div>
+		</div>
+
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script src="fonts/iconfont.js"></script>
+	<script src="js/mui.zoom.js"></script>
+	<script src="js/mui.previewimage.js"></script>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script>
+		mui('body').on('tap', 'a', function() {
+			document.location.href = this.href;
+		});
+		mui.previewImage();
+
+		//点击底部导航条的加号弹出应用菜单
+		document.getElementById("div_plus").addEventListener('tap', function() {
+			document.getElementById('div_postboard').classList.remove('mui-hidden');
+		});
+		//点击弹出应用菜单的"X"关闭当前窗口
+		var btn2 = document.getElementById("closepost");
+		btn2.onclick = function(e) {
+			document.getElementById('div_postboard').classList.add('mui-hidden');
+		}
+
+
+		//点击“评论”按钮图标弹出评论功能菜单
+		function showCommentMenu(v) {
+			var a = document.getElementById('div-comment-message' + v);
+			if (a.className.indexOf("mui-hidden") > -1) {
+				a.classList.remove('mui-hidden');
+			} else {
+				a.classList.add('mui-hidden');
+			}
+
+		}
+
+		//点击“V”弹出多个孩子的姓名列表菜单
+		var btn = document.getElementById("div_childname");
+		var li = document.getElementById('div_childnamelist'); //获取li元素
+		btn.onclick = function(e) {
+			//alert("click");
+			if (li.className.indexOf("mui-hidden") > -1) {
+				document.getElementById("div_childnamelist").classList.remove('mui-hidden');
+			} else {
+				document.getElementById("div_childnamelist").classList.add('mui-hidden');
+			}
+		}
+
+		//播放视频
+		var div_video = document.getElementById("div_video");
+		div_video.onclick = function(e) {
+			//alert("click88");
+			document.getElementById("videoID").play();
+		}
+
+		//调用输入评论内容隐藏/显示弹出层
+		document.getElementById("btn_pinglun").addEventListener("tap", function() {
+			mui("#div_inputContent").popover('toggle');
+		})
+		//点击认领功能后图片改为待选择状态
+		document.getElementById("span_renling").addEventListener("tap", function() {
+			//alert("点击认领")
+			for(i=0;i<document.getElementsByName("SelectImgGroup1").length;i++)
+                 {
+                 document.getElementsByName("SelectImgGroup1")[i].classList.remove('mui-hidden'); //显示该组所有的待选框
+                }
+			document.getElementById("btn_renling2").classList.remove('mui-hidden'); //显示认领按钮
+			document.getElementById("pull2").classList.add('mui-hidden'); //隐藏下拉箭头
+
+		})
+		function changeSrc(v){
+			//alert("改变"+v+"的图片地址");
+			var id_selectImg = document.getElementById("id_selectImg"+v);
+			var str =id_selectImg.src;
+			if(str.indexOf("selected.png")>-1){
+				id_selectImg.src="images/select.png";
+			}
+			else {
+				id_selectImg.src="images/selected.png";
+			}			
+		}
+
+
+		//弹出右侧下拉分享菜单
+		document.getElementById("pull1").addEventListener("tap", function() {
+			mui("#rightPopover1").popover('toggle');
+		})
+		document.getElementById("pull2").addEventListener("tap", function() {
+			mui("#rightPopover2").popover('toggle');
+		})
+		document.getElementById("pull3").addEventListener("tap", function() {
+			mui("#rightPopover3").popover('toggle');
+		})
+		document.getElementById("pull4").addEventListener("tap", function() {
+			mui("#rightPopover4").popover('toggle');
+		})
+	</script>
+
+</html>

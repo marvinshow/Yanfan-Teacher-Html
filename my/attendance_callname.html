@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css" />
+		<link rel="stylesheet" type="text/css" href="../libs/showcase.css" />
+	</head>
+
+	<body>
+		<div class="mui-navbar-inner mui-bar mui-bar-nav">
+			<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left" style="color: #C0C0C0;">
+				<span class="mui-icon mui-icon-left-nav"></span>返回
+			</button>
+			<button id="submit" class="mui-btn mui-btn-blue mui-btn-link mui-pull-right">提交</button>
+			<h1 class="mui-center mui-title">入园点名</h1>
+		</div>
+		<div class="mui-content">
+
+			<div class="att-bar">
+				<a href="#">
+					<div class="em-title title-active">
+						<span>入园点名</span>
+					</div>
+				</a>
+				<a href="attendance_leave.html">
+				<div class="em-title">
+					<span>离园提醒</span>
+				</div>
+				</a>
+				<a href="attendance_record.html">
+				<div class="em-title">
+					<span>考勤记录</span>
+				</div>
+				</a>
+			</div>
+
+
+			<ul class="mui-table-view mui-grid-view mui-grid-9" style="background-color: #FFFFFF;border: 0px;margin: 10px 0 10px 0; ">
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" style="border: 0px;">
+					<div class="mui-media-body" style="font-size: 13px;" align="left">
+						<span>出勤全选</span>
+						<span class="mui-input-group mui-checkbox" style="position: inherit;border: 0px;">
+							<label class="mui-hidden">checked：true</label>
+							<input name="checkbox" value="Item 2" type="checkbox" checked>
+						</span>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3" style="border: 0px;">
+					<div class="mui-media-body" style="font-size: 13px;color: #1AAD19;" align="left">出勤</div>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3" style="border: 0px;">
+					<div class="mui-media-body" style="font-size: 13px;color: #FF0000;" align="left">病假</div>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-2" style="border: 0px;">
+					<div class="mui-media-body" style="font-size: 13px;color: #EC971F;" align="left">事假</div>
+				</li>
+			</ul>
+			
+			<h5 class="mui-content-padded">未点名</h5>
+			<ul class="mui-table-view mui-grid-view mui-grid-9" style="background-color: #FFFFFF;border: 0px;margin: 10px 0 10px 0; ">
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" style="border: 0px;">
+					<div class="mui-media-body" style="font-size: 13px;height: 50px;">
+						<img class="mui-pull-left" src="../images/girl_b.png" style="width: 50px;height: 50px;">
+						<span style="">陈亮亮</span>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3" style="border: 0px;">
+					<div class="mui-media-body hb-radio-green" style="height: 25px;position: relative;">
+						<input type='radio' id='radio1' name='att'>
+						<label for='radio1' style="">34</label>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3" style="border: 0px;">
+					<div class="mui-media-body hb-radio-red" style="height: 25px;">
+						<input type='radio' id='radio2' name='att'>
+						<label for='radio2'></label>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-2" style="border: 0px;">
+					<div class="mui-media-body hb-radio-yellow" style="height: 25px;">
+						<input type='radio' id='radio3' name='att'>
+						<label for='radio3'></label>
+					</div>
+				</li>
+			</ul>
+			
+			<h5 class="mui-content-padded">已点名</h5>
+			<ul class="mui-table-view mui-grid-view mui-grid-9" style="background-color: #FFFFFF;border: 0px;margin: 10px 0 10px 0; ">
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" style="border: 0px;">
+					<div class="mui-media-body" style="font-size: 13px;height: 50px;">
+						<img class="mui-pull-left" src="../images/muwu.jpg" style="width: 50px;height: 50px;">
+						<span style="">冯青峰</span>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3" style="border: 0px;">
+					<div class="mui-media-body hb-radio-green" style="height: 25px;text-align: center;font-size: 13px;">
+						<input type='radio' id='radio1' name='att'>
+						<label for='radio1'></label>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3" style="border: 0px;">
+					<div class="mui-media-body hb-radio-red" style="height: 25px;">
+						<input type='radio' id='radio2' name='att'>
+						<label for='radio2'></label>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-2" style="border: 0px;">
+					<div class="mui-media-body hb-radio-yellow" style="height: 25px;">
+						<input type='radio' id='radio3' name='att'>
+						<label for='radio3'></label>
+					</div>
+				</li>
+				
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" style="border: 0px;">
+					<div class="mui-media-body" style="font-size: 13px;height: 50px;">
+						<img class="mui-pull-left" src="../images/shuijiao.jpg" style="width: 50px;height: 50px;">
+						<span style="">马洪涛</span>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3" style="border: 0px;">
+					<div class="mui-media-body hb-radio-green" style="height: 25px;text-align: center;font-size: 13px;">
+						<input type='radio' id='radio1' name='att'>
+						<label for='radio1'></label>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3" style="border: 0px;">
+					<div class="mui-media-body hb-radio-red" style="height: 25px;">
+						<input type='radio' id='radio2' name='att'>
+						<label for='radio2'></label>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-2" style="border: 0px;">
+					<div class="mui-media-body hb-radio-yellow" style="height: 25px;">
+						<input type='radio' id='radio3' name='att'>
+						<label for='radio3'></label>
+					</div>
+				</li>
+			</ul>
+			
+
+
+
+			<div class="attData">
+				<ul class="mui-table-view">
+
+					<li class="mui-table-view-cell mui-media">
+						<div class="mui-media-body hb-message-info">
+							<p>说明：</p>
+						</div>
+						<div class="mui-media-body" style="width: 100%;">
+							<span class="mui-btn-green">入园时：如果幼儿园有考勤机，系统会自动记录已刷卡的孩子为出勤状态，在点名时请老师根据实际现场情况进行勾选并提交。当日可重复修改提交，以最后一次提交的数据为准。</span><br>
+							<br>
+
+							<span class="mui-btn-green">离园时：请勾选已离园孩子并提交；家长会收到孩子已经离园的消息提醒。</span>
+							<br><br>
+
+						</div>
+					</li>
+
+					</ul>
+			</div>
+		</div>
+
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script>
+		mui.init({
+			swipeBack: true //启用右滑关闭功能
+		});
+		mui('.mui-input-group').on('change', 'input', function() {
+			var value = this.checked ? "true" : "false";
+			this.previousElementSibling.innerText = "checked：" + value;
+		});
+	</script>
+
+</html>

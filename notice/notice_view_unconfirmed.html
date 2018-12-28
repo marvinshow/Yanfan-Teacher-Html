@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css" />
+		<style>
+			#abc {
+				width: 0px;
+				height: 0px;
+				background: red;
+				position: fixed;
+				top: 70%;
+				left: 50%;
+			}
+			/*移除底部或顶部三角,需要在删除此代码*/
+			.mui-popover .mui-popover-arrow:after {
+				width: 0px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="mui-navbar-inner mui-bar mui-bar-nav">
+			<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left" style="color: #C0C0C0;">
+				<span class="mui-icon mui-icon-left-nav"></span>返回
+			</button>
+			<a href="notice_content.html"><button id="submit" class="mui-btn mui-btn-blue mui-btn-link mui-pull-right">内容详情</button></a>
+			<h1 class="mui-center mui-title">统计详情</h1>
+		</div>
+		
+		<div class="mui-content" style="position: absolute;width: 100%;">
+			<div class="att-bar">
+				<a href="notice_view_confirmed.html">
+					<div class="em-title" style="width: 50%;">
+						<span>已确认（0人）</span>
+					</div>
+				</a>
+				<a href="#">
+					<div class="em-title title-active" style="width: 50%;">
+						<span>未确认（2人）</span>
+					</div>
+				</a>
+
+			</div>
+
+
+			<ul class="mui-table-view  mui-table-view-chevron" style="margin-top: 60px;">
+				<li class="mui-table-view-cell" style="padding-right: 65px;">
+					<a href="#">
+						<div class="mui-table" style="align-items:center; display: -webkit-flex;">
+							<div class="mui-table-cell mui-col-xs-10">
+								<span class="mui-h4 mui-ellipsis">杨伟博的爸爸</span>
+							</div>
+							<div class="mui-table-cell mui-col-xs-2 mui-text-right">
+								<span id="btn_noticeParent">
+									<img class="selficon" src="../images/remin.png"/>
+								</span>
+								<span>
+									<img class="selficon" src="../images/phone.png"/>
+								</span>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell" style="padding-right: 65px;">
+					<a href="#">
+						<div class="mui-table" style="align-items:center; display: -webkit-flex;">
+							<div class="mui-table-cell mui-col-xs-10">
+								<span class="mui-h4 mui-ellipsis">杨伟博的妈妈</span>
+							</div>
+							<div class="mui-table-cell mui-col-xs-2 mui-text-right">
+								<span id="btn_noticeParent">
+									<img class="selficon" src="../images/remin.png"/>
+								</span>
+								<span>
+									<img class="selficon" src="../images/phone.png"/>
+								</span>
+							</div>
+						</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell" style="padding-right: 65px;">
+					<a href="#">
+						<div class="mui-table" style="align-items:center; display: -webkit-flex;">
+							<div class="mui-table-cell mui-col-xs-10">
+								<span class="mui-h4 mui-ellipsis">谢美西的妈妈</span>
+							</div>
+							<div class="mui-table-cell mui-col-xs-2 mui-text-right">
+								<span id="btn_noticeParent">
+									<img class="selficon" src="../images/remin.png"/>
+								</span>
+								<span>
+									<img class="selficon" src="../images/phone.png"/>
+								</span>
+							</div>
+						</div>
+					</a>
+				</li>
+			</ul>
+
+			<div id="abc"></div>
+			<div id="popover" class="mui-popover" style="height: 120px;">
+				<div class="mui-popover-arrow"></div>
+				<div style="margin: 10px auto;text-align: center;">要提醒于涵的爸爸及时签收吗？</div>
+
+				<div style="margin-top: 30px;position: relative;text-align: center;">
+					<button type="button" class="mui-btn">
+						免费电话提醒
+					</button>
+					<button type="button" class="mui-btn mui-btn-success">
+						免费短信提醒
+					</button>
+				</div>
+			</div>
+			
+			<div class="mui-index-bottom">
+				——我是有底线的——
+			</div>
+
+		</div>
+
+
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script src="../fonts/iconfont.js"></script>
+	<script>
+		mui('body').on('tap', 'a', function() {
+			document.location.href = this.href;
+		});
+		
+		document.getElementById("btn_noticeParent").addEventListener("tap", function() {
+			//调用隐藏/显示弹出层
+			mui("#popover").popover('toggle', document.getElementById("abc"));
+		})
+	</script>
+</html>

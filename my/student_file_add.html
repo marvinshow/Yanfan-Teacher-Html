@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css" />
+
+	</head>
+
+	<body>
+		<div class="mui-navbar-inner mui-bar mui-bar-nav">
+			<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left" style="color: #C0C0C0;">
+				<span class="mui-icon mui-icon-left-nav"></span>返回
+			</button>
+			<h1 class="mui-center mui-title">添加学生</h1>
+		</div>
+		<div class="mui-content">
+			<div class="mui-content-padded">
+				<ul class="mui-table-view">
+					<form class="mui-input-group">
+						<div class="mui-input-row" style="height: 50px;margin-top: 10px;margin-left: 10px;">
+							<label>学生姓名</label>
+							<input type="text" placeholder="请输入孩子身份证姓名" value="">
+						</div>
+						
+						<div class="mui-input-row" style="height: 50px;margin-top: 10px;margin-left: 10px;align-items:center; display: -webkit-flex;">
+							<label>性别</label>
+							<span><input id="sex1" name="sex" type="radio">男</span>
+							<span style="margin-left: 50px;"><input id="sex2" name="sex" type="radio">女</span>
+						</div>
+
+						<div class="mui-button-row" style="height: 80px;margin-top: 10px;padding: 10px 25px 10px 25px;">
+							<button type="button" class="mui-btn mui-btn-block mui-btn-success ">提交</button>
+						</div>
+					</form>
+				</ul>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+
+	</body>
+
+</html>

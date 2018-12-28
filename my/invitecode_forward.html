@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../css/mui.min.css">
+
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css" />
+		<style>
+
+			.tectop_txt, .tectop_btnt {
+				width: 100%;
+				padding: 4% 5%;
+				border-top: 10px #f4f5f6 solid;
+				overflow: hidden;
+				background-color: #fff;
+			}
+			.tectop_txt .tit {
+				float: left;
+				width: 100%;
+				line-height: 23px;
+				font-size: 1em;
+				color: #1AAD19;
+				font-weight: 700;
+			}
+			.tectop_txt .t_con, .tectop_txt .t_num {
+				float: left;
+				width: 100%;
+				line-height: 20px;
+				margin-top: 3px;
+				font-size: .875em;
+				color: #3b3b3b;
+				text-indent: 30px;
+			}
+			.code_t {
+				float: left;
+				width: 100%;
+				line-height: 25px;
+				margin-top: 15px;
+				font-size: 25px;
+				color: #3b3b3b;
+				font-weight: 700;
+				text-align: center;
+			}
+			.copy_code, .qr_code {
+				float: left;
+				width: 100%;
+				margin-top: 15px;
+				text-align: center;
+			}
+			.qr_code p {
+				color: #1aad19;
+			}
+			.tectop_txt, .tectop_btnt {
+				width: 100%;
+				padding: 4% 5%;
+				border-top: 10px #f4f5f6 solid;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="mui-navbar-inner mui-bar mui-bar-nav">
+			<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left" style="color: #C0C0C0;">
+				<span class="mui-icon mui-icon-left-nav"></span>返回
+			</button>
+			<h1 class="mui-center mui-title">家长注册指南</h1>
+		</div>
+		<div class="mui-content">
+			<div class="tectop_txt">
+				<span class="tit">亲爱的家长：</span>
+				<span class="t_con">我是幼儿园的老师,我邀请您注册加入扬帆幼儿园互联网服务平台。本平台将是老师和您的日常工作交流平台。</span>
+				<span class="t_con">本平台依托幼儿园公众号,为家长们提供了丰富的内容和功能,可以使用“哄宝神器”陪伴孩子,可以使用"家园沟通"与老师沟通孩子的成长点滴,可以使用“超级育儿教练”培养孩子的好习惯。</span>
+				<span class="t_con">赶紧按照下面的流程进行注册吧。</span>
+			</div>
+
+
+			<div class="tectop_txt">
+				<span class="tit">注册指南：</span>
+				<span class="t_num">1.请记住园长给您发来的专属邀请码：</span>
+				<span class="code_t">asyd7</span>
+				<span class="copy_code"><button type="button" class="mui-btn mui-btn-green">复制</button></span>
+				
+			</div>
+			
+			<div class="tectop_txt">
+				<span class="t_num">2.请长按下方二维码，关注幼儿园公众号【扬帆幼儿园互联网服务平台】</span>
+				<div class="qr_code">
+					<span><img style="width: 100px;" src="https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQGg8DwAAAAAAAAAAS5odHRwOi8vd2VpeGluLnFxLmNvbS9xLzAyT3J3THdSMF9mOGgxbXY3YzFzY2UAAgSfuiRcAwQAjScA"></span>
+					<p>（长按二维码）</p>
+				</div>
+			</div>
+	
+
+
+	</body>
+	<script src="../js/mui.min.js "></script>
+
+	<script>
+		mui.init();
+		mui('body').on('tap', 'a', function() {
+			document.location.href = this.href;
+		});
+	</script>
+
+</html>

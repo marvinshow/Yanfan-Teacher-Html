@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/icons-extra.css" />
+		<link rel="stylesheet" type="text/css" href="../css/mui.picker.min.css" />
+
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css" />
+		
+	</head>
+
+	<body>
+
+		<div class="mui-navbar-inner mui-bar mui-bar-nav">
+			<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left" style="color: #C0C0C0;">
+				<span class="mui-icon mui-icon-left-nav"></span>返回
+			</button>
+			<h1 class="mui-center mui-title">我的动态</h1>
+		</div>
+		<div class="mui-content">
+			<ul class="mui-table-view">
+
+				<li class="mui-table-view-cell mui-media" style="width: 100%;">
+					<div class="mui-media-object mui-pull-left" style="width: 100%;">
+						<img class="mui-media-object mui-pull-left" src="../images/default_photo.png">
+					</div>
+					<div class="mui-media-body">
+						<div>
+							<span class="mui-media-author" style="float: left;">王涛(主班老师)</span>
+
+						</div>
+						<div class="mui-media-content">孩子在游乐区玩耍 </div>
+						<ul class="mui-table-view mui-grid-view" style="margin-left: -12px;margin-top: 5px;">
+							<li class="mui-table-view-cell mui-media mui-col-xs-4">
+								<div>
+									<img class="mui-media-object" src="../images/shuijiao.jpg" data-preview-src="" data-preview-group="1">
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4">
+								<img class="mui-media-object" src="../images/muwu.jpg" data-preview-src="" data-preview-group="1">
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4">
+								<img class="mui-media-object" src="../images/cbd.jpg" data-preview-src="" data-preview-group="1">
+							</li>
+						</ul>
+						<div class="hb-media-tag">
+							<div class="hb-tag-info">
+								<span>12:32</span>
+								<span>宝宝相册</span>
+								<a href="#"><span><img src="../images/group_icon.png" style="width:15px;"></span></a>
+								<a href="my.html"><span style="margin-left: 50px;color: #576b95;">删除</span></a>
+							</div>
+							<div class="hb-comment-message mui-hidden" id="div-comment-message1">
+								<span class="mui-icon-extra mui-icon-extra-heart verticalmiddle hb-disabled"></span><span class="hb-comment-message-text hb-disabled" style="">已赞</span>
+								<span class="splitline">|</span>
+								<span class="mui-icon mui-icon-chatbubble verticalmiddle"></span><span id="btn_pinglun" class="hb-comment-message-text">评论</span>
+							</div>
+							<div class="hb-comments-button" id="toastBtn" onclick="showCommentMenu(1)"></div>
+						</div>
+						<div class="hb-comment-board">
+							<ul class="mui-table-view">
+								<li class="mui-table-view-cell hb-li-comment">
+									<span class="mui-icon-extra mui-icon-extra-heart"></span>
+									<span class="hb-li-comment-author">
+										于涵的爸爸
+									</span>
+								</li>
+								<li class="mui-table-view-cell hb-li-comment">
+									<span class="hb-li-comment-author">王紫萱的妈妈：</span>拍得好漂亮啊
+								</li>
+								<li class="mui-table-view-cell hb-li-comment">
+									<span class="hb-li-comment-author">杨伟博的爸爸：</span>怎么没拍上我儿子？
+								</li>
+								<li class="mui-table-view-cell hb-li-comment">
+									<span class="hb-li-comment-author">陈刚园长</span>回复<span class="hb-li-comment-author">杨伟博的爸爸：</span>你那宝贝儿子淘气得都飞上天了，拍不着他
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</li>
+
+				<li class="mui-table-view-cell mui-media" style="width: 100%;">
+					<div class="mui-media-object mui-pull-left" style="width: 100%;">
+						<img class="mui-media-object mui-pull-left" src="../images/default_photo.png">
+					</div>
+					<div class="mui-media-body">
+						<div>
+							<span class="mui-media-author" style="float: left;">王涛(主班老师)</span>
+
+						</div>
+						<div class="mui-media-content">集体去莱西生态园春游</div>
+						<ul class="mui-table-view mui-grid-view" style="margin-left: -12px;margin-top: 5px;">
+							<li class="mui-table-view-cell mui-media mui-col-xs-4">
+								<div>
+									<img class="mui-media-object" src="../images/shuijiao.jpg" data-preview-src="" data-preview-group="2">
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4">
+								<img class="mui-media-object" src="../images/muwu.jpg" data-preview-src="" data-preview-group="2">
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4">
+								<img class="mui-media-object" src="../images/cbd.jpg" data-preview-src="" data-preview-group="2">
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4">
+								<div>
+									<img class="mui-media-object" src="../images/shuijiao.jpg" data-preview-src="" data-preview-group="2">
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4">
+								<img class="mui-media-object" src="../images/muwu.jpg" data-preview-src="" data-preview-group="2">
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4">
+								<img class="mui-media-object" src="../images/cbd.jpg" data-preview-src="" data-preview-group="2">
+							</li>
+						</ul>
+						<div class="hb-media-tag">
+							<div class="hb-tag-info">
+								<span>照片</span>
+								<span>班级相册</span>
+								<a href="#"><span><img src="../images/group_icon.png" style="width:15px;"></span></a>
+								<a href="my.html"><span style="margin-left: 50px;color: #576b95;">删除</span></a>
+							</div>
+							<div class="hb-comment-message mui-hidden" id="div-comment-message2">
+								<span class="mui-icon-extra mui-icon-extra-heart verticalmiddle hb-disabled"></span><span class="hb-comment-message-text hb-disabled" style="">已赞</span>
+								<span class="splitline">|</span>
+								<span class="mui-icon mui-icon-chatbubble verticalmiddle"></span><span id="btn_pinglun" class="hb-comment-message-text">评论</span>
+							</div>
+							<div class="hb-comments-button" id="toastBtn" onclick="showCommentMenu(2)"></div>
+						</div>
+
+					</div>
+				</li>
+
+			</ul>
+			
+			<div class="mui-index-bottom">
+				——我是有底线的——
+			</div>
+			
+		</div>
+
+
+	</body>
+	<script src="../js/mui.min.js "></script>
+	<script src="../fonts/iconfont.js"></script>
+	<script src="../js/mui.zoom.js"></script>
+	<script src="../js/mui.previewimage.js"></script>
+
+	<script>
+		mui.init();
+		mui('body').on('tap', 'a', function() {
+					document.location.href = this.href;
+				});
+		mui.previewImage();
+		
+		//点击“评论”按钮图标弹出评论功能菜单
+				function showCommentMenu(v) {
+					var a = document.getElementById('div-comment-message' + v);
+					if (a.className.indexOf("mui-hidden") > -1) {
+						a.classList.remove('mui-hidden');
+					} else {
+						a.classList.add('mui-hidden');
+					}
+		
+				}
+	</script>
+
+</html>

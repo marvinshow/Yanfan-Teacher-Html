@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css" />
+	</head>
+
+	<body>
+
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item" href="../default.html">
+				<span class="mui-icon mui-icon-star"></span>
+				<span class="mui-tab-label">动态</span>
+			</a>
+			<a class="mui-tab-item mui-active" href="javascript:void(0)">
+				<span class="mui-icon mui-icon-email-filled"><span class="mui-badge">9</span></span>
+				<span class="mui-tab-label">通知</span>
+			</a>
+			<a id="div_plus" class="mui-tab-item mui-active" href="javascript:void(0)">
+				<div class="plus">
+					<span class="mui-icon mui-icon-plus" style="font-size: 50px;float: left;margin:-6px 0px 0px -2px;"></span>
+				</div>
+			</a>
+			<a class="mui-tab-item" href="../im/im_list.html">
+				<span class="mui-icon mui-icon-chatbubble"></span>
+				<span class="mui-tab-label">聊聊</span>
+			</a>
+			<a class="mui-tab-item" href="../my/my.html">
+				<span class="mui-icon mui-icon-person"></span>
+				<span class="mui-tab-label">我</span>
+			</a>
+		</nav>
+
+
+		<div class="mui-content" style="position: absolute;width: 100%;">
+			<div class="att-bar">
+				<a href="#">
+					<div class="em-title title-active" style="width: 50%;">
+						<span>全部</span>
+					</div>
+				</a>
+				<a href="attendance_leave.html">
+					<div class="em-title" style="width: 50%;">
+						<span>我收到</span>
+					</div>
+				</a>
+
+			</div>
+
+
+			<ul class="mui-table-view  mui-table-view-chevron" style="margin-top: 60px;">
+				<li class="mui-table-view-cell mui-media" style="padding-bottom: 0px;">
+					<a href="notice_content.html" class='mui-navigate-right' style="white-space: normal;">
+						<img class="mui-media-object mui-pull-left" src="../images/shuijiao.jpg">
+						<div class="mui-media-body">
+							<div class="mui-h4" style="color: #576b95;">秋游活动</div>
+							<div class="mui-h5" style="color: #000000;">参加爬山活动<br>时间：12月18日-12月22日<br>地点：崂山</div>
+						</div>
+					</a>
+					<p class="mui-h6" style="margin: 10px 0 0px 62px;">2018.12.14 11:22
+						<span id="confirmBtn" style="margin-left: 50px;color: #576b95;cursor: pointer;">删除</span>
+					</p>
+					<p class="mui-h6" style="margin: 0px 0 10px 62px;">
+						<span>已确认：0</span>
+						<span style="margin-left: 20px;">未确认：2</span>
+						<a href="notice_view_confirmed.html">
+							<span style="float: right;color: #576b95;">确认统计</span>
+						</a>
+					</p>
+				</li>
+				
+				<li class="mui-table-view-cell mui-media" style="padding-bottom: 0px;">
+					<a href="notice_content.html" class='mui-navigate-right' style="white-space: normal;">
+						<img class="mui-media-object mui-pull-left" src="../images/shuijiao.jpg">
+						<div class="mui-media-body">
+							<div class="mui-h4" style="color: #576b95;">冬季安全须知</div>
+							<div class="mui-h5" style="color: #000000;">
+								目前已进入冬季，恶劣天气增多，是火灾、交通、煤气中毒、滑冰等安全事故的高发期。为切实保障孩子的人身安全，恳请家长协同幼儿园关注如下温馨提示。								
+							</div>
+						</div>
+					</a>
+					<p class="mui-h6" style="margin: 10px 0 0px 62px;">2018.12.14 11:22
+						<span id="confirmBtn" style="margin-left: 50px;color: #576b95;cursor: pointer;">删除</span>
+					</p>
+					<p class="mui-h6" style="margin: 0px 0 10px 62px;">
+						<span>已确认：0</span>
+						<span style="margin-left: 20px;">未确认：2</span>
+						<a href="notice_view_confirmed.html">
+							<span style="float: right;color: #576b95;">确认统计</span>
+						</a>
+					</p>
+				</li>
+
+			</ul>
+
+			<div class="mui-index-bottom">
+				——我是有底线的——
+			</div>
+
+		</div>
+
+		<!--点击底部导航“+”后弹出的发布页面-->
+		<div id="div_postboard" class="container mui-hidden">
+			<div class="posttile">
+				<h2>发布</h2>
+			</div>
+			<div id='messageBar' class="post-bar">
+				<div id="More_content" class="post-tool-div">
+					<div class="div-post-icon">
+						<p>
+							<svg class="posticon" aria-hidden="true">
+								<use xlink:href="#icon-dongtai1"></use>
+							</svg>
+						</p>
+						<span>发动态</span>
+					</div>
+
+					<div class="div-post-icon">
+						<p>
+							<svg class="posticon" aria-hidden="true">
+								<use xlink:href="#icon-shipinwenjian"></use>
+							</svg>
+						</p>
+						<span>拍摄</span>
+					</div>
+				</div>
+				<div id="closepost" class="closeIcon"><img src="../images/close.png" /></div>
+			</div>
+		</div>
+
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script src="../fonts/iconfont.js"></script>
+	<script>
+		mui('body').on('tap', 'a', function() {
+			document.location.href = this.href;
+		});
+		document.getElementById("confirmBtn").addEventListener('tap', function() {
+			var btnArray = ['否', '是'];
+			mui.confirm('您确定要删除该条信息吗？', '', btnArray, function(e) {
+				if (e.index == 1) {
+					mui.toast('你刚确认了要删除条信息');
+				} else {
+					mui.toast('没有得到你的认可，系统不会删除该条信息');
+				}
+			})
+		});
+
+		//点击底部导航条的加号弹出应用菜单
+		document.getElementById("div_plus").addEventListener('tap', function() {
+			document.getElementById('div_postboard').classList.remove('mui-hidden');
+		});
+		//点击弹出应用菜单的"X"关闭当前窗口
+		var btn2 = document.getElementById("closepost");
+		btn2.onclick = function(e) {
+			document.getElementById('div_postboard').classList.add('mui-hidden');
+		}
+	</script>
+</html>
